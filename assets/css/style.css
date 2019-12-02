@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     font-family: 'Sriracha', cursive;
 }
 body,html {
@@ -35,3 +36,14 @@ body,html {
   .input-field .prefix.active {
     color: white !important;
   }
+=======
+    font-family: "Sriracha", cursive;
+}
+#bump{
+    margin: 5px 35px 0px 20px;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+>>>>>>> 31a20b5d1041c6f467620116794cd8bf28022356

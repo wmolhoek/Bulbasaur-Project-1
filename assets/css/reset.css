@@ -46,3 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+img{
+	height: 150px;
+	width: auto;
+}
