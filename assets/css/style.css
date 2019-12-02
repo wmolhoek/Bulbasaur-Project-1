@@ -1,4 +1,42 @@
 * {
+<<<<<<< HEAD
+    font-family: 'Sriracha', cursive;
+}
+body,html {
+    font-family: 'Sriracha', cursive;
+    background: url("../images/Polar-Background.png");
+    background-size: cover;
+    height: 1920px;
+    color: white !important;
+}
+
+.logo-pic {
+    width: 50px;
+    height: 50px;
+}
+
+.search-bar {
+    border-radius: 30px;
+    padding-right:20px;
+}
+ /* label color */
+ .input-field label {
+    color: white !important;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: white !important;
+  }
+  
+  textarea.materialize-textarea {
+      border-bottom: 1px solid white !important;
+      box-shadow: 0 1px 0 0 white !important;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: white !important;
+  }
+=======
     font-family: "Sriracha", cursive;
 }
 #bump{
@@ -8,3 +46,4 @@
 p{
     font-family: 'Poppins', sans-serif;
 }
+>>>>>>> 31a20b5d1041c6f467620116794cd8bf28022356
