@@ -1,8 +1,10 @@
-$(document).ready(function) {
-    $(".dropdown-trigger").dropdown();
-}
+M.AutoInit();
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+    instances.open();
+  });
 
 
 //const game = user input
