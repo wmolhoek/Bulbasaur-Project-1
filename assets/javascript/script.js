@@ -1,49 +1,32 @@
 M.AutoInit();
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, options);
     instances.open();
-  });
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, options);
     instances.open();
-  });
+});
 
 function search() {
 
-let searchBtn = document.getElementById("button-search");
-const userInput = document.getElementById("user-input");
+    let searchBtn = document.getElementById("button-search");
+    const userInput = document.getElementById("user-input");
 
-displayArea = document.getElementById("display-area");
-omdbDisplayArea = document.getElementById("omdb-display");
+    displayArea = document.getElementById("display-area");
+    omdbDisplayArea = document.getElementById("omdb-display");
 
-let moviesArray = [];
+    let moviesArray = [];
 
 
     searchBtn.addEventListener("click", function () {
         let searchTerm = userInput.value;
         console.log(searchTerm);
-
-
-        // axios.get(queryURL)
-        //     .then(function (response) {
-        //         // console.log(queryURL);
-        //         console.log(response.data.results);
-        //         moviesArray = response.data.results;
-        //         for (i = 0; i < moviesArray.length; i++) {
-        //             const movieBtn = document.createElement("a");
-        //             movieBtn.innerHTML = moviesArray[i].display_title;
-        //             movieBtn.setAttribute("href", moviesArray[i].link.url);
-        //             movieBtn.setAttribute("class", "button");
-        //             displayArea.append(movieBtn);
-
-
-        //         }
-
-        //     })
         let omdbQueryUrl = "https://www.omdbapi.com/?t=" + searchTerm + "&apikey=trilogy";
         console.log(omdbQueryUrl);
 
@@ -131,3 +114,85 @@ search()
 
 
 
+function onload() {
+
+
+    $("#button-search").on("click", function () {
+
+        console.log("button clicked");
+        let appId = [];
+        let input = document.getElementById('user-input').value;
+        console.log(input);
+
+        axios.get('https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamApps/GetAppList/v2/')
+            .then(function (response) {
+
+                console.log(JSON.stringify(response, null, 2));
+
+                appId.push(response);
+
+                let targetID = response.data.applist.apps.find(appName => appName.name === input);
+
+                console.log("targetID", targetID);
+                console.log("targetID", targetID.appid);
+                let ID = targetID.appid;
+                storeURL = 'https://cors-anywhere.herokuapp.com/https://store.steampowered.com/api/appdetails?appids=' + targetID.appid;
+
+                console.log(storeURL);
+
+                axios.get(storeURL)
+                    .then(function (response2) {
+
+                        console.log("2nd get function run")
+                        console.log(response2);
+
+
+                        //game summary
+
+                        let summary = $('<br><p>game summary: <br><br> ' + response2.data[ID].data.about_the_game + '</p><br>');
+                        $('#omdb-display').append(summary);
+
+                        //game trailer
+
+                        console.log(response2.data[ID].data.movies[0].webm.max);
+                        let trailer = $('<br><video width="1280" height="720" controls> <source src=' + response2.data[ID].data.movies[0].webm.max + 'type=video/ogg> </video> <br><br>');
+                        $('#omdb-display').prepend(trailer);
+
+                        //game name
+
+                        console.log(response2.data[ID].data.name);
+                        let gameName = $('<br> <p> Game Name: ' + response2.data[ID].data.name + '</p>');
+                        $('#omdb-display').prepend(gameName);
+
+                        //developer
+
+                        console.log(response2.data[ID].data.developers);
+                        let developers = $('<br> <p> Game Developer(s):' + response2.data[ID].data.developers + '</p> <br><br>');
+                        $('#omdb-display').append(developers);
+
+
+                        //publisher
+
+                        console.log(response2.data[ID].data.publishers);
+                        let publishers = $('<br> <p> Game Publisher(s):' + response2.data[ID].data.publishers + '</p> <br><br>');
+                        $(developers).append(publishers);
+
+
+                        //metacritic
+
+                        console.log(response2.data[ID].data.metacritic.score);
+                        let metacriticScore = $('<br> <p> Metacritic Score:' + response2.data[ID].data.metacritic.score + '</p> <br>');
+                        $('#omdb-display').append(metacriticScore);
+
+                        let metacriticURL = $('<br> <p>Metacritic Website: <a href="' + response2.data[ID].data.metacritic.url + '"> Metacritic.com </a></p> <br><br>');
+                        $(metacriticScore).append(metacriticURL);
+
+
+
+                    });
+            });
+
+
+
+    });
+} onload();
