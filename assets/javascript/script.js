@@ -6,23 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     instances.open();
 });
 
-<<<<<<< HEAD
 
-// //const game = user input
-// const url = "http://www.giantbomb.com/api/search/?api_key=69db5b20e3ad1fdd87c655256f6505e8b020cb8d&format=json&query="+game+"&resources=game"
-
-
-// // api key for OMDB
-// const OMDBqueryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
-
-
-// // API Key for YouTube = AIzaSyAiMpo3Mnkq2c_KjtywxD7_lxBQTapW0HA
-// const youTubeQueryURL = "https://www.googleapis.com/youtube/v3/search";
-
-document.addEventListener('DOMContentLoaded', function () {
-=======
 document.addEventListener('DOMContentLoaded', function() {
->>>>>>> b49d0acd2229909471c82f47efb76c11b2d45b6a
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, options);
     instances.open();
@@ -42,24 +27,6 @@ function search() {
     searchBtn.addEventListener("click", function () {
         let searchTerm = userInput.value;
         console.log(searchTerm);
-
-
-        // axios.get(queryURL)
-        //     .then(function (response) {
-        //         // console.log(queryURL);
-        //         console.log(response.data.results);
-        //         moviesArray = response.data.results;
-        //         for (i = 0; i < moviesArray.length; i++) {
-        //             const movieBtn = document.createElement("a");
-        //             movieBtn.innerHTML = moviesArray[i].display_title;
-        //             movieBtn.setAttribute("href", moviesArray[i].link.url);
-        //             movieBtn.setAttribute("class", "button");
-        //             displayArea.append(movieBtn);
-
-
-        //         }
-
-        //     })
         let omdbQueryUrl = "https://www.omdbapi.com/?t=" + searchTerm + "&apikey=trilogy";
         console.log(omdbQueryUrl);
 
