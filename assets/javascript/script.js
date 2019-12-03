@@ -82,6 +82,7 @@ function search() {
                                 movieLink.innerHTML = moviesArray[i].display_title;
                                 movieLink.setAttribute("href", moviesArray[i].link.url);
                                 movieLink.setAttribute("class", "button");
+                                movieLink.setAttribute("target","blank");
                                 // movieDisplay.append(movieLink);
                                 omdbDisplayArea.prepend(movieLink);
                             };
@@ -91,6 +92,7 @@ function search() {
 
 
                 posterDisplay.setAttribute("src", response.data.Poster);
+                posterDisplay.setAttribute("id","posterImg");
                 movieDisplay.append(posterDisplay);
 
                 omdbDisplayArea.append(movieDisplay);
