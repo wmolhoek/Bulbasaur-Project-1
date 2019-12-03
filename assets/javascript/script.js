@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     instances.open();
 });
 
+<<<<<<< HEAD
 
 // //const game = user input
 // const url = "http://www.giantbomb.com/api/search/?api_key=69db5b20e3ad1fdd87c655256f6505e8b020cb8d&format=json&query="+game+"&resources=game"
@@ -19,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // const youTubeQueryURL = "https://www.googleapis.com/youtube/v3/search";
 
 document.addEventListener('DOMContentLoaded', function () {
+=======
+document.addEventListener('DOMContentLoaded', function() {
+>>>>>>> b49d0acd2229909471c82f47efb76c11b2d45b6a
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, options);
     instances.open();
