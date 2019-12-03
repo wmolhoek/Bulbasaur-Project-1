@@ -103,3 +103,16 @@ label {
   .input-field .prefix.active {
     color: white ;
   }
+  #screenShot{
+      transform: scale(2);
+      margin-left: 170px;
+      margin-top: 80px;
+  }
+  #lower{
+      margin-top: 100px;
+  }
+  #posterImg{
+      transform: scale(2);
+      margin-left: 50px;
+      margin-top: 80px;
+  }

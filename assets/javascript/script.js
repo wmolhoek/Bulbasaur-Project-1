@@ -8,10 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-/////////////////////////////////////////////////////////////////////
-
-
 function onload() {
 
 
@@ -76,7 +72,15 @@ function onload() {
 
 
 
+                                movieLink.innerHTML = moviesArray[i].display_title;
+                                movieLink.setAttribute("href", moviesArray[i].link.url);
+                                movieLink.setAttribute("class", "button");
+                                movieLink.setAttribute("target","blank");
+                                // movieDisplay.append(movieLink);
+                                omdbDisplayArea.prepend(movieLink);
+                            
                     const movieTitle = response.data.Title;
+
 
                     let nytReviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieTitle + "&api-key=J4LLcLYdwjbGQvjGuEQK9mGgePlM1SWk";
 
@@ -85,6 +89,10 @@ function onload() {
                             console.log(response);
                             moviesArray = response.data.results;
                             console.log(moviesArray);
+
+                posterDisplay.setAttribute("src", response.data.Poster);
+                posterDisplay.setAttribute("id","posterImg");
+                movieDisplay.append(posterDisplay);
 
                             for (i = 0; i < moviesArray.length; i++) {
                                 let nytDisplayTitle = response.data.results[i].display_title;
@@ -190,9 +198,5 @@ function onload() {
 
                         });
                 });
-        }
-
-
-
-    });
-} onload();
+            }
+onload()
