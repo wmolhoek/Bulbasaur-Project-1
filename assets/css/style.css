@@ -61,9 +61,45 @@ p,h3,h6{
     border-left: 1px solid #CCCCCC;
 }
 #omdb-display{
-    margin-top: 165px;
+    margin-top: 75px;
     margin-left: 10px;
 }
 p{
     padding: 3px;
 }
+#input{
+    margin-top: 100px;
+}
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    background-color: #01579B;
+    border-color: #01579B;
+}
+label {
+    color:#01579B;
+}
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in) {
+    border: 2px solid white;
+}
+.input-field label {
+    color: #01579B ;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: white ;
+  }
+  textarea.materialize-textarea {
+      border-bottom: 1px solid white ;
+      box-shadow: 0 1px 0 0 white ;
+  }
+  textarea.materialize-textarea:focus:not([readonly])+label {
+      color: white;
+  }
+  textarea.materialize-textarea:focus:not([readonly]) {
+    color: white;
+    border-bottom: white;
+    box-shadow: 0 1px 0 0 white;
+}
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: white ;
+  }
