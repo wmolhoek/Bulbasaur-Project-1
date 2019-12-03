@@ -6,6 +6,24 @@ document.addEventListener('DOMContentLoaded', function() {
     instances.open();
   });
 
+
+// //const game = user input
+// const url = "http://www.giantbomb.com/api/search/?api_key=69db5b20e3ad1fdd87c655256f6505e8b020cb8d&format=json&query="+game+"&resources=game"
+
+
+// // api key for OMDB
+// const OMDBqueryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+
+
+// // API Key for YouTube = AIzaSyAiMpo3Mnkq2c_KjtywxD7_lxBQTapW0HA
+// const youTubeQueryURL = "https://www.googleapis.com/youtube/v3/search";
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+    instances.open();
+  });
+
 function search() {
 
 let searchBtn = document.getElementById("button-search");

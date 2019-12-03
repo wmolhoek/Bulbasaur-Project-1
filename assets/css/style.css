@@ -65,16 +65,17 @@ p,h3,h6{
     margin-top: 225px;
 }
 .button {
-    font: bold 11px Arial;
+    font: bold 15px Arial;
     text-decoration: none;
     background-color: #EEEEEE;
     color: #333333;
-    padding: 2px 6px 2px 6px;
+    padding: 2px 6px;
     border-top: 1px solid #CCCCCC;
     border-right: 1px solid #333333;
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
 }
+<<<<<<< HEAD
 
 [type="checkbox"].filled-in:checked+span:not(.lever):after {
     background-color: #01579b;
@@ -86,4 +87,12 @@ label {
 }
 [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in) {
     border: 2px solid white;
+=======
+#omdb-display{
+    margin-top: 165px;
+    margin-left: 10px;
+}
+p{
+    padding: 3px;
+>>>>>>> 210d231f5a618cc1c428ea4386774038753a6bb4
 }
