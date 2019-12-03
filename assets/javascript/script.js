@@ -18,6 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // // API Key for YouTube = AIzaSyAiMpo3Mnkq2c_KjtywxD7_lxBQTapW0HA
 // const youTubeQueryURL = "https://www.googleapis.com/youtube/v3/search";
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+    instances.open();
+  });
 
 function search() {
 
