@@ -80,7 +80,7 @@ let moviesArray = [];
 
 
 
-
+                console.log("UFNEIUNFUINUFEIUNFIUE", response.data.Title);
                 const movieTitle = response.data.Title;
 
                 let nytReviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieTitle + "&api-key=J4LLcLYdwjbGQvjGuEQK9mGgePlM1SWk";
