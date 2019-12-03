@@ -89,6 +89,7 @@ function onload() {
                                     movieLink.innerHTML = moviesArray[i].display_title;
                                     movieLink.setAttribute("href", moviesArray[i].link.url);
                                     movieLink.setAttribute("class", "button");
+                                    movieLink.setAttribute("target","blank");
                                     // movieDisplay.append(movieLink);
                                     omdbDisplayArea.prepend(movieLink);
                                 };
