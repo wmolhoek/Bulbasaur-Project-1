@@ -33,7 +33,7 @@
       </ul>
     </div>
   </nav>
-  <div class="container center-align">
+  <div id="input" class="container center-align">
     <div class="row">
       <form class="col s12">
         <div class="row">
@@ -41,8 +41,15 @@
             <i class="material-icons prefix white-text">search</i>
             <textarea id="user-input" class="materialize-textarea white-text"></textarea>
             <label for="icon_prefix2">Search</label>
+            <label id="input">
+              <input id="gameCheck" type="checkbox" class="filled-in" checked="checked" />
+              <span>Games</span>
+              <label>
+                <input id="movieCheck" type="checkbox" class="filled-in" checked="checked" />
+                <span>Movies</span>
+              </label>
           </div>
-        </div>
+        </div> 
       </form>
     </div>
   </div>
