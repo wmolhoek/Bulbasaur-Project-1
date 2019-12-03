@@ -1,5 +1,4 @@
 * {
-<<<<<<< HEAD
     font-family: 'Sriracha', cursive;
 }
 body,html {
@@ -8,6 +7,9 @@ body,html {
     background-size: cover;
     height: 1920px;
     color: white !important;
+}
+span {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .logo-pic {
@@ -36,14 +38,14 @@ body,html {
   .input-field .prefix.active {
     color: white !important;
   }
-=======
-    font-family: "Sriracha", cursive;
-}
+
+  h1{
+      margin: 1px !important;
+      font-family: 'Sriracha', cursive !important;
+
+  }
 #bump{
     margin: 5px 35px 0px 20px;
 }
 
-p{
-    font-family: 'Poppins', sans-serif;
-}
->>>>>>> 31a20b5d1041c6f467620116794cd8bf28022356
+
