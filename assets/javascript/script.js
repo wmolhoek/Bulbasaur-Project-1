@@ -19,6 +19,7 @@ function onload() {
 
 
     $("#button-search").on("click", function () {
+        omdbDisplayArea.innerHTML= "";
         console.log(document.getElementById('user-input').value);
 
         if (document.getElementById("movieCheck").checked) {
@@ -66,19 +67,7 @@ function onload() {
                     ratingMetaCritDisplay.setAttribute("class", "meta-critic")
                     ratingMetaCritDisplay.innerHTML = "MetaCritic Rating: " + response.data.Ratings[2].Value;
                     movieDisplay.append(ratingMetaCritDisplay);
-
-                    const MetaCritic = document.getElementById("meta-critic")
-
-
-
-
-                                movieLink.innerHTML = moviesArray[i].display_title;
-                                movieLink.setAttribute("href", moviesArray[i].link.url);
-                                movieLink.setAttribute("class", "button");
-                                movieLink.setAttribute("target","blank");
-                                // movieDisplay.append(movieLink);
-                                omdbDisplayArea.prepend(movieLink);
-                            
+                          
                     const movieTitle = response.data.Title;
 
 
@@ -89,10 +78,6 @@ function onload() {
                             console.log(response);
                             moviesArray = response.data.results;
                             console.log(moviesArray);
-
-                posterDisplay.setAttribute("src", response.data.Poster);
-                posterDisplay.setAttribute("id","posterImg");
-                movieDisplay.append(posterDisplay);
 
                             for (i = 0; i < moviesArray.length; i++) {
                                 let nytDisplayTitle = response.data.results[i].display_title;
@@ -107,12 +92,14 @@ function onload() {
                                     // movieDisplay.append(movieLink);
                                     omdbDisplayArea.prepend(movieLink);
                                 };
-
                             }
-                        })
-
+                            })
+                        
+                        
+                    
 
                     posterDisplay.setAttribute("src", response.data.Poster);
+                    posterDisplay.setAttribute("id","posterImg")
                     movieDisplay.append(posterDisplay);
 
                     omdbDisplayArea.append(movieDisplay);
@@ -199,4 +186,6 @@ function onload() {
                         });
                 });
             }
+        });
+    }
 onload()
