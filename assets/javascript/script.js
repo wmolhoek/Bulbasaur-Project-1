@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var instances = M.Dropdown.init(elems, options);
     instances.open();
 });
-
 function search() {
 
     let searchBtn = document.getElementById("button-search");
