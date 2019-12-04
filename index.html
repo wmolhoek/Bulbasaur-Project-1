@@ -9,7 +9,7 @@
   <link href="assets/css/reset.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Sriracha&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -38,44 +38,28 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s6 offset-s3 light-blue darken-4 search-bar center-align z-depth-4">
-            <i id="button-search" class="material-icons prefix white-text">search</i>
+            <i id="button-search" class="material-icons prefix">search</i>
             <textarea id="user-input" class="materialize-textarea white-text"></textarea>
             <label for="icon_prefix2">Search</label>
             <label id="input">
-              <input id="gameCheck" type="checkbox" class="filled-in" checked="checked" />
-              <span>Games</span>
+              <input id="gameCheck" type="radio" name="game/movie" />
+              <span id="radioBoxes">Games</span>
               <label>
-                <input id="movieCheck" type="checkbox" class="filled-in" checked="checked" />
-                <span>Movies</span>
+                <input id="movieCheck" type="radio" name="game/movie" />
+                <span id="radioBoxes">Movies</span>
               </label>
           </div>
         </div>
       </form>
     </div>
   </div>
-  <!-- <div class="container">
-     <div class="row">
-      <input class="form-control" id="user-input" placeholder="Enter text">
-    </div> 
-     <div class="row">
-      <button id="button-search" type="submit" class="btn btn-primary">Submit</button>
-    </div> 
-  </div>
-    </div> -->
-    <div class="row center-align" id="omdb-display">
-
+  <div class="row center-align" id="omdb-display">
   </div>
 
-
-  </div>
 
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-
-
-
   <!-- Compiled and minified JavaScript for materialize-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
   </script>
