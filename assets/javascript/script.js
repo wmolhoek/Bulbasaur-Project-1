@@ -19,7 +19,7 @@ function onload() {
 
 
     $("#button-search").on("click", function () {
-        omdbDisplayArea.innerHTML= "";
+        omdbDisplayArea.innerHTML = "";
         console.log(document.getElementById('user-input').value);
 
         if (document.getElementById("movieCheck").checked) {
@@ -67,7 +67,7 @@ function onload() {
                     ratingMetaCritDisplay.setAttribute("class", "meta-critic")
                     ratingMetaCritDisplay.innerHTML = "MetaCritic Rating: " + response.data.Ratings[2].Value;
                     movieDisplay.append(ratingMetaCritDisplay);
-                          
+
                     const movieTitle = response.data.Title;
 
 
@@ -89,18 +89,18 @@ function onload() {
                                     movieLink.innerHTML = moviesArray[i].display_title;
                                     movieLink.setAttribute("href", moviesArray[i].link.url);
                                     movieLink.setAttribute("class", "button");
-                                    movieLink.setAttribute("target","blank");
+                                    movieLink.setAttribute("target", "blank");
                                     // movieDisplay.append(movieLink);
                                     omdbDisplayArea.prepend(movieLink);
                                 };
                             }
-                            })
-                        
-                        
-                    
+                        })
+
+
+
 
                     posterDisplay.setAttribute("src", response.data.Poster);
-                    posterDisplay.setAttribute("id","posterImg")
+                    posterDisplay.setAttribute("id", "posterImg")
                     movieDisplay.append(posterDisplay);
 
                     omdbDisplayArea.append(movieDisplay);
@@ -186,7 +186,7 @@ function onload() {
 
                         });
                 });
-            }
-        });
-    }
+        }
+    });
+}
 onload()

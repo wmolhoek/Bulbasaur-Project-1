@@ -70,18 +70,15 @@ p{
 #input{
     margin-top: 100px;
 }
-[type="checkbox"].filled-in:checked+span:not(.lever):after {
+[type="radio"].filled-in:checked+span:not(.lever):after {
     background-color: #01579B;
     border-color: #01579B;
 }
-label {
-    color:#01579B;
-}
-[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in) {
-    border: 2px solid white;
+[type="radio"]+span:not(.lever):before, [type="radio"]:not(.filled-in) {
+    border: 2px solid #01579B;
 }
 .input-field label {
-    color: #01579B ;
+    color: white ;
   }
   /* label focus color */
   .input-field input[type=text]:focus + label {
@@ -99,10 +96,6 @@ label {
     border-bottom: white;
     box-shadow: 0 1px 0 0 white;
 }
-  /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: white ;
-  }
   #screenShot{
       transform: scale(2);
       margin-left: 170px;
@@ -118,4 +111,8 @@ label {
   }
   #button-search:hover{
       cursor: pointer;
+  }
+  #radioBoxes{
+      color:  #01579B;
+      margin: 0px 20px;
   }
