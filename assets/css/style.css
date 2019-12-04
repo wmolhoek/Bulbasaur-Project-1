@@ -116,3 +116,7 @@ p{
       color:  #01579B;
       margin: 0px 20px;
   }
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+ background-color: #01579B;   
+}
